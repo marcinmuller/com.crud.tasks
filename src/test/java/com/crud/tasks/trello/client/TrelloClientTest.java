@@ -23,8 +23,8 @@ import static org.mockito.Mockito.when;
 /**
  * Created by Marcin Muller on 16.10.17.
  */
-@RunWith(MockitoJUnitRunner.Silent.class)
-//@RunWith(MockitoJUnitRunner.class)
+//@RunWith(MockitoJUnitRunner.Silent.class)
+@RunWith(MockitoJUnitRunner.class)
 public class TrelloClientTest {
     @InjectMocks
     private TrelloClient trelloClient;
