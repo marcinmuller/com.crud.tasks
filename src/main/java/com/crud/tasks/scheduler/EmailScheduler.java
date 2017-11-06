@@ -1,3 +1,4 @@
+/*
 package com.crud.tasks.scheduler;
 
 import com.crud.tasks.config.AdminConfig;
@@ -31,3 +32,4 @@ public class EmailScheduler {
         return "Currently in database you got: "+size+((size!=1)?" tasks":" task");
     }
 }
+*/

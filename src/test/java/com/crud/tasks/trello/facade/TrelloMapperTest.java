@@ -28,6 +28,7 @@ public class TrelloMapperTest {
         Assert.assertEquals(cardDto.getDescription(),"card_description_1");
         Assert.assertEquals(cardDto.getPos(),"card_pos_1");
         Assert.assertEquals(cardDto.getListId(),"card_listId_1");
+        Assert.assertEquals(cardDto.getPos(),"card_pos_1");
     }
 
     @Test

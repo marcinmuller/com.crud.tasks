@@ -39,5 +39,8 @@ dependencies {
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 //		providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
 	compile('org.springframework.boot:spring-boot-starter-mail:1.5.7.RELEASE')
+	compile('com.google.code.gson:gson:2.8.2')
+//	compile('org.springframework.boot:spring-boot-actuator:2.0.0.M5')
+	compile('org.springframework.boot:spring-boot-actuator')
 
 }
