@@ -63,13 +63,13 @@ public class TrelloController {
 //        return trelloClient.createNewCard(trelloCardDto);
 //    }
 
-/*    @RequestMapping(method = RequestMethod.POST, value = "createTrelloCard")
+    @RequestMapping(method = RequestMethod.POST, value = "createTrelloCard")
     public CreatedTrelloCardDto createTrelloCard(@RequestBody TrelloCardDto trelloCardDto){
         return trelloService.createdTrelloCard(trelloCardDto);
     }
-*/
-    @RequestMapping(method = RequestMethod.POST, value = "createTrelloCard")
+
+ /*   @RequestMapping(method = RequestMethod.POST, value = "createTrelloCard")
     public CreatedTrelloCardDto createTrelloCard(@RequestBody TrelloCardDto trelloCardDto){
         return trelloFacade.createCard(trelloCardDto);
-    }
+    }*/
 }
