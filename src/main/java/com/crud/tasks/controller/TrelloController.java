@@ -18,9 +18,9 @@ public class TrelloController {
 //    @Autowired
 //    private TrelloClient trelloClient;
 
-/*    @Autowired
+    @Autowired
     private TrelloService trelloService;
-*/
+
 
     @Autowired
     private TrelloFacade trelloFacade;
@@ -30,15 +30,17 @@ public class TrelloController {
 //        return trelloClient.getTrelloBoards();
 //    }
 
- /*   @RequestMapping(method = RequestMethod.GET, value = "getTrelloBoards")
+    @RequestMapping(method = RequestMethod.GET, value = "getTrelloBoards")
     public List<TrelloBoardDto> getTrelloBoards() {
         return trelloService.fetchTrelloBoards();
     }
-*/
-    @RequestMapping(method = RequestMethod.GET, value = "getTrelloBoards")
+
+/*    @RequestMapping(method = RequestMethod.GET, value = "getTrelloBoards")
     public List<TrelloBoardDto> getTrelloBoards() {
         return trelloFacade.fetchTrelloBoards();
     }
+
+ */
 //    public void getTrelloBoards() {
 //        List<TrelloBoardDto> trelloBoards = trelloClient.getTrelloBoards();
 //
