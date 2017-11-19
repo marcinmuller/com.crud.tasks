@@ -30,21 +30,21 @@ public class TaskControllerTest {
     @MockBean
     private TaskController taskController;
 
-    @Test
-    public void testGetTasks() throws Exception {
-        //given
-        List<TaskDto> list = new ArrayList<>();
-        list.add(new TaskDto(1L,"title","content"));
-        when(taskController.getTasks()).thenReturn(list);
-        //when and given
-        mockMvc.perform(get("/v1/task/getTasks").contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$",hasSize(1)))
-                .andExpect(jsonPath("$[0].id", is(1)))
-                .andExpect(jsonPath("$[0].title", is("title")))
-                .andExpect(jsonPath("$[0].content", is("content")));
-
-    }
+//    @Test
+//    public void testGetTasks() throws Exception {
+//        given
+//        List<TaskDto> list = new ArrayList<>();
+//        list.add(new TaskDto(1L,"title","content"));
+//        when(taskController.getTasks()).thenReturn(list);
+//        when and given
+//        mockMvc.perform(get("/v1/task/getTasks").contentType(MediaType.APPLICATION_JSON))
+//                .andExpect(status().isOk())
+//                .andExpect(jsonPath("$",hasSize(1)))
+//                .andExpect(jsonPath("$[0].id", is(1)))
+//                .andExpect(jsonPath("$[0].title", is("title")))
+//                .andExpect(jsonPath("$[0].content", is("content")));
+//
+//    }
 
     @Test
     public void testGetTask() throws Exception {
