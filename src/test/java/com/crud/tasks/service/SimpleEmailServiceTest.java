@@ -14,46 +14,46 @@ import static org.junit.Assert.*;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
-@RunWith(MockitoJUnitRunner.class)
+//@RunWith(MockitoJUnitRunner.class)
 public class SimpleEmailServiceTest {
-    @InjectMocks
-    private SimpleEmailService simpleEmailService;
+//    @InjectMocks
+//    private SimpleEmailService simpleEmailService;
+//
+//    @Mock
+//    private JavaMailSender javaMailSender;
 
-    @Mock
-    private JavaMailSender javaMailSender;
+//    @Test
+//    public void shouldSendEmailWithoutCC(){
+        //        given
+//        Mail mail = new Mail("ss@ss.s", "test", "test test", null);
+//
+//        SimpleMailMessage mailMessage = new SimpleMailMessage();
+//        mailMessage.setTo(mail.getMailTo());
+//        mailMessage.setSubject(mail.getSubject());
+//        mailMessage.setText(mail.getMessage());
 
-    @Test
-    public void shouldSendEmailWithoutCC(){
-//        given
-        Mail mail = new Mail("ss@ss.s", "test", "test test", null);
+        //        when
+//        simpleEmailService.send(mail);
 
-        SimpleMailMessage mailMessage = new SimpleMailMessage();
-        mailMessage.setTo(mail.getMailTo());
-        mailMessage.setSubject(mail.getSubject());
-        mailMessage.setText(mail.getMessage());
+        //          then
+//        verify(javaMailSender, times(1)).send(mailMessage);
+//    }
 
-//        when
-        simpleEmailService.send(mail);
-
-//        then
-        verify(javaMailSender, times(1)).send(mailMessage);
-    }
-
-    @Test
-    public void shouldSendEmailWithCC(){
-//        given
-        Mail mail = new Mail("flaszowiec@gmail.com", "test", "test test", "ss@ss.ss");
-
-        SimpleMailMessage mailMessage = new SimpleMailMessage();
-        mailMessage.setTo(mail.getMailTo());
-        mailMessage.setSubject(mail.getSubject());
-        mailMessage.setText(mail.getMessage());
-        mailMessage.setCc(mail.getToCc());
-
-//        when
-        simpleEmailService.send(mail);
-
-//        then
-        verify(javaMailSender, times(1)).send(mailMessage);
-    }
+//    @Test
+//    public void shouldSendEmailWithCC(){
+    //        given
+//        Mail mail = new Mail("flaszowiec@gmail.com", "test", "test test", "ss@ss.ss");
+//
+//        SimpleMailMessage mailMessage = new SimpleMailMessage();
+//        mailMessage.setTo(mail.getMailTo());
+//        mailMessage.setSubject(mail.getSubject());
+//        mailMessage.setText(mail.getMessage());
+//        mailMessage.setCc(mail.getToCc());
+//
+    //        when
+//        simpleEmailService.send(mail);
+//
+    //        then
+//        verify(javaMailSender, times(1)).send(mailMessage);
+//    }
 }
