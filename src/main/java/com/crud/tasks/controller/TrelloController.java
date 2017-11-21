@@ -12,37 +12,37 @@ import java.util.List;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/v1/trello")
+@RequestMapping("/v1/trello/")
 public class TrelloController {
 
 //    @Autowired
 //    private TrelloClient trelloClient;
 
-    @Autowired
-    private TrelloService trelloService;
+//    @Autowired
+//    private TrelloService trelloService;
 
 
     @Autowired
     private TrelloFacade trelloFacade;
+
 
 //    @RequestMapping(method = RequestMethod.GET, value = "getTrelloBoards")
 //    public List<TrelloBoardDto> getTrelloBoards() {
 //        return trelloClient.getTrelloBoards();
 //    }
 
-      @RequestMapping(method = RequestMethod.GET, value = "getTrelloBoards")
+/*      @RequestMapping(method = RequestMethod.GET, value = "getTrelloBoards")
        public List<TrelloBoardDto> getTrelloBoards() {
            return trelloService.fetchTrelloBoards();
        }
+*/
 
-
-    /*
-    @RequestMapping(method = RequestMethod.GET, value = "getTrelloBoards")
+//    @RequestMapping(method = RequestMethod.GET, value = "getTrelloBoards")
+    @RequestMapping(method = RequestMethod.GET, value = "boards")
     public List<TrelloBoardDto> getTrelloBoards() {
         return trelloFacade.fetchTrelloBoards();
     }
 
-    */
 //    public void getTrelloBoards() {
 //        List<TrelloBoardDto> trelloBoards = trelloClient.getTrelloBoards();
 //
@@ -70,7 +70,8 @@ public class TrelloController {
             return trelloService.createdTrelloCard(trelloCardDto);
         }
     */
-    @RequestMapping(method = RequestMethod.POST, value = "createTrelloCard")
+//    @RequestMapping(method = RequestMethod.POST, value = "createTrelloCard")
+    @RequestMapping(method = RequestMethod.POST, value = "cards")
     public CreatedTrelloCardDto createTrelloCard(@RequestBody TrelloCardDto trelloCardDto){
         return trelloFacade.createCard(trelloCardDto);
     }
