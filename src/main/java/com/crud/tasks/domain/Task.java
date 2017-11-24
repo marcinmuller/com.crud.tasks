@@ -3,6 +3,7 @@ package com.crud.tasks.domain;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -10,6 +11,7 @@ import javax.validation.constraints.NotNull;
 /**
  * Created by Marcin Muller on 08.09.17.
  */
+
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
