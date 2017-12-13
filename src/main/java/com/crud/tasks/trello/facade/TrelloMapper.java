@@ -3,7 +3,6 @@ package com.crud.tasks.trello.facade;
 import com.crud.tasks.domain.TrelloBoardDto;
 import com.crud.tasks.domain.TrelloCardDto;
 import com.crud.tasks.domain.TrelloListDto;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -15,9 +14,6 @@ import static java.util.stream.Collectors.toList;
  */
 @Component
 public class TrelloMapper {
-//    public TrelloBoard mapToBoard(final TrelloBoardDto trelloBoardDto) {
-//        return new TrelloBoard(trelloBoardDto.getId(), trelloBoardDto.getName(), mapToList(trelloBoardDto.getLists()));
-//    }
 
     public List<TrelloBoard> mapToBoards(final List<TrelloBoardDto> trelloBoardDto){
         return trelloBoardDto.stream()

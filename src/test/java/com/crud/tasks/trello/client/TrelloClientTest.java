@@ -23,7 +23,6 @@ import static org.mockito.Mockito.when;
 /**
  * Created by Marcin Muller on 16.10.17.
  */
-//@RunWith(MockitoJUnitRunner.Silent.class)
 @RunWith(MockitoJUnitRunner.class)
 public class TrelloClientTest {
     @InjectMocks
@@ -89,7 +88,6 @@ public class TrelloClientTest {
     public void shouldReturnEmptyList() throws URISyntaxException{
         //given
         URI uri = new URI("http://test");
-//        when(restTemplate.getForObject(uri, TrelloBoardDto[].class)).thenReturn(null);
         //when
         List<TrelloBoardDto> fetchedTrelloBoards = trelloClient.getTrelloBoards();
         //then

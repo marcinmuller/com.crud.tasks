@@ -11,7 +11,6 @@ import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.mail.javamail.MimeMessagePreparator;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
 
 @Service
 public class SimpleEmailService {
@@ -21,25 +20,19 @@ public class SimpleEmailService {
     @Autowired
     private JavaMailSender javaMailSender;
 
-    //thyme
     @Autowired
     private MailCreatorService mailCreatorService;
-    //<-thyme
 
     public void send(final Mail mail){
         try {
-//thyme
             SimpleMailMessage mailMessage = createMailMessage(mail);
             javaMailSender.send(mailMessage);
-//<-thyme
-//            javaMailSender.send(createMimeMessage(mail));
             LOGGER.info("email has been sent");
         }catch (MailException e){
             LOGGER.error("failed to process email sending", e.getMessage(), e);
         }
     }
 
-//zadanie 24.3
     public void send(final MimeMessagePreparator mimeMessagePreparator){
         try {
             javaMailSender.send(mimeMessagePreparator);
@@ -50,18 +43,6 @@ public class SimpleEmailService {
         }
     }
 
-    //thyme
-    private MimeMessagePreparator createMimeMessage(final Mail mail){
-        return mimeMessage -> {
-            MimeMessageHelper messageHelper = new MimeMessageHelper(mimeMessage);
-            messageHelper.setTo(mail.getMailTo());
-            messageHelper.setSubject(mail.getSubject());
-            messageHelper.setText(mailCreatorService.buildTrelloCardEmail(mail.getMessage()),true);
-        };
-    }
-    //<-thyme
-
-//zadanie 24.3
     public MimeMessagePreparator createMimeMessageNumberOfTasks(final Mail mail){
         return mimeMessage -> {
             MimeMessageHelper messageHelper = new MimeMessageHelper(mimeMessage);
